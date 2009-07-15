@@ -122,7 +122,7 @@ add_action('bangla_kb', 'wp_banglakb_comments');
 
 function wp_banglakb_comments(){
 
-		echo <<<EOT
+	?>
 		 		<script type='text/javascript' src='<?php echo get_option('siteurl'); ?>/wp-content/plugins/banglakb/unijoy.js'></script>
 		 		<script type='text/javascript' src='<?php echo get_option('siteurl'); ?>/wp-content/plugins/banglakb/phoneticunicode.js'></script>
 		 		<script type='text/javascript' src='<?php echo get_option('siteurl'); ?>/wp-content/plugins/banglakb/probhatunicode.js'></script>
@@ -175,7 +175,7 @@ function wp_banglakb_comments(){
 <input type='button' value='probhat' id='probhat' onclick='enableProbhat();'></input>
 <input type='button' value='english' id='english' onclick='enableEnglish();'></input>
 
-EOT;
+<?php
 				
 }
 ?>
