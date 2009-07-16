@@ -4,7 +4,7 @@ Plugin Name: BanglKB
 Plugin URI: http://ekushey.org/?page/web_input_manager
 Description: Allowes you to write Unijoy and Phonetic Bangla in New Post Section & also in comment section. This plugin is first developed by Hasin Hayder (http://hasinhayder.net). And later S. M. Ibrahim (lavlu) (http://www.lavluda.com) added support on comments. In the version 2.0 we added support of Probhat keyboard layout. BanglKB  is released from ekushey (http://ekushey.org)
 Author: S. M. Ibrahim Lavlu
-Version: 2.1.1
+Version: 2.1.2
 Author URI: http://www.lavluda.com
 */
 
@@ -12,9 +12,9 @@ add_action('admin_footer', 'wp_banglakb');
 function wp_banglakb(){
 
 		echo <<<EOT
-		 		<script type="text/javascript" src="../wp-content/plugins/banglakb/unijoy.js"></script>
-		 		<script type="text/javascript" src="../wp-content/plugins/banglakb/phoneticunicode.js"></script>
-		 		<script type="text/javascript" src="../wp-content/plugins/banglakb/probhatunicode.js"></script>
+		 		<script type="text/javascript" src="../wp-content/plugins/banglkb/unijoy.js"></script>
+		 		<script type="text/javascript" src="../wp-content/plugins/banglkb/phoneticunicode.js"></script>
+		 		<script type="text/javascript" src="../wp-content/plugins/banglkb/probhatunicode.js"></script>
 				<script type="text/javascript">
 					<!--
 						if(swiToolbar = document.getElementById("ed_toolbar")){
@@ -123,9 +123,9 @@ add_action('bangla_kb', 'wp_banglakb_comments');
 function wp_banglakb_comments(){
 
 	?>
-		 		<script type='text/javascript' src='<?php echo get_option('siteurl'); ?>/wp-content/plugins/banglakb/unijoy.js'></script>
-		 		<script type='text/javascript' src='<?php echo get_option('siteurl'); ?>/wp-content/plugins/banglakb/phoneticunicode.js'></script>
-		 		<script type='text/javascript' src='<?php echo get_option('siteurl'); ?>/wp-content/plugins/banglakb/probhatunicode.js'></script>
+		 		<script type='text/javascript' src='<?php echo get_option('siteurl'); ?>/wp-content/plugins/banglkb/unijoy.js'></script>
+		 		<script type='text/javascript' src='<?php echo get_option('siteurl'); ?>/wp-content/plugins/banglkb/phoneticunicode.js'></script>
+		 		<script type='text/javascript' src='<?php echo get_option('siteurl'); ?>/wp-content/plugins/banglkb/probhatunicode.js'></script>
 				<script type='text/javascript'>
 								
 				function enableUnijoy() {
