@@ -12,6 +12,8 @@ Bangla Typing Scripts for wordpress. This Java Script based add-ons will let you
 
 Bangla Typing Scripts for wordpress. This Java Script based add-ons will let your visitors type in Bangla without using any 3rd party tool or keyboard manager along with in your "new post page" you will get option to write post in bangla. These add-ons are very flexible and easy to install to any site and 100% workable with Mozilla FireFox (1.0 or higher), Apple Safari, Microsoft Internet Explorer (5 or higher) and any Gecko engine based web browser.
 
+for live example: visit http://www.lavluda.com
+
 Currently 3 layouts have been developed for WordPress and they are in mature status.
 
 == Installation ==
