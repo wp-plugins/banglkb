@@ -1,7 +1,7 @@
 === Plugin Name ===
 Contributors: lavluda
 Donate link: http://www.ekushey.org/
-Tags: keyboard, bangla
+Tags: keyboard, bangla, comment
 Requires at least: 1.5
 Tested up to: 2.8.2
 Stable tag: 2.1.2
