@@ -86,8 +86,8 @@ function wp_banglakb(){
 }
 
 	function enablePhonetic() {
-	makeUniPhoneticEditor('content');
-	makeUniPhoneticEditor('title');
+	makePhoneticEditor('content');
+	makePhoneticEditor('title');
 	document.getElementById('ed_wpunijoy').style.color="#000";
 	document.getElementById('ed_wpenglish').style.color="#000";
 	document.getElementById('ed_wpprobhat').style.color="#000";
