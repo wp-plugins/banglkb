@@ -4,7 +4,7 @@ Plugin Name: BanglKB
 Plugin URI: http://ekushey.org/?page/web_input_manager
 Description: Allowes you to write Unijoy and Phonetic Bangla in New Post Section & also in comment section. This plugin is first developed by Hasin Hayder (http://hasinhayder.net). And later S. M. Ibrahim (lavlu) (http://www.lavluda.com) added support on comments. In the version 2.0 we added support of Probhat keyboard layout. BanglKB  is released from ekushey (http://ekushey.org)
 Author: S. M. Ibrahim Lavlu
-Version: 2.1.2
+Version: 2.1.3
 Author URI: http://www.lavluda.com
 */
 
