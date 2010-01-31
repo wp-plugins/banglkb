@@ -4,20 +4,20 @@ Plugin Name: BanglKB
 Plugin URI: http://ekushey.org/?page/web_input_manager
 Description: Allowes you to write Unijoy and Phonetic Bangla in New Post Section & also in comment section. This plugin is first developed by Hasin Hayder (http://hasinhayder.net). And later S. M. Ibrahim (lavlu) (http://www.lavluda.com) added support on comments. In the version 2.0 we added support of Probhat keyboard layout. BanglKB  is released from ekushey (http://ekushey.org)
 Author: S. M. Ibrahim Lavlu
-Version: 2.1.3
+Version: 2.1.4
 Author URI: http://www.lavluda.com
 */
 
 add_action('admin_footer', 'wp_banglakb');
 function wp_banglakb(){
 
-		echo <<<EOT
-		 		<script type="text/javascript" src="../wp-content/plugins/banglkb/unijoy.js"></script>
-		 		<script type="text/javascript" src="../wp-content/plugins/banglkb/phoneticunicode.js"></script>
-		 		<script type="text/javascript" src="../wp-content/plugins/banglkb/probhatunicode.js"></script>
-				<script type="text/javascript">
+		echo "
+		 		<script type='text/javascript' src='../wp-content/plugins/banglkb/unijoy.js'></script>
+		 		<script type='text/javascript' src='../wp-content/plugins/banglkb/phoneticunicode.js'></script>
+		 		<script type='text/javascript' src='../wp-content/plugins/banglkb/probhatunicode.js'></script>
+				<script type='text/javascript'>
 					<!--
-						if(swiToolbar = document.getElementById("ed_toolbar")){
+						if(swiToolbar = document.getElementById('ed_toolbar')){
 							var swiLength, swiBut, swiStart, swiEnd;
 
 							swiLength = edButtons.length;
@@ -31,7 +31,7 @@ function wp_banglakb(){
 							swiBut.value = 'UniJoy';
 							swiBut.title = 'UniJoy';
 							swiBut.onclick = enableUnijoy;
-							swiBut.id = "ed_wpunijoy";
+							swiBut.id = 'ed_wpunijoy';
 							
 							swiLength = edButtons.length;
 							edButtons[swiLength] = new edButton('ed_swiPhonetic','Phonetic','', '','');
@@ -44,7 +44,7 @@ function wp_banglakb(){
 							swiBut.value = 'Phonetic';
 							swiBut.title = 'Phonetic';
 							swiBut.onclick = enablePhonetic;
-							swiBut.id = "ed_wpphonetic";
+							swiBut.id = 'ed_wpphonetic';
 							
 							
 							swiLength = edButtons.length;
@@ -58,7 +58,7 @@ function wp_banglakb(){
 							swiBut.value = 'Probhat';
 							swiBut.title = 'Probhat';
 							swiBut.onclick = enableProbhat;
-							swiBut.id = "ed_wpprobhat";
+							swiBut.id = 'ed_wpprobhat';
 							
 							swiLength = edButtons.length;
 							edButtons[swiLength] = new edButton('ed_swiEnglish','English','', '','');
@@ -71,7 +71,7 @@ function wp_banglakb(){
 							swiBut.value = 'English';
 							swiBut.title = 'English';
 							swiBut.onclick = enableEnglish;
-							swiBut.id = "ed_wpenglish";
+							swiBut.id = 'ed_wpenglish';
 
 						}
 
@@ -79,43 +79,43 @@ function wp_banglakb(){
 	function enableUnijoy() {
 	makeUnijoyEditor('content');
 	makeUnijoyEditor('title');
-	document.getElementById('ed_wpunijoy').style.color="#222EEE";
-	document.getElementById('ed_wpprobhat').style.color="#000";
-	document.getElementById('ed_wpenglish').style.color="#000";
-	document.getElementById('ed_wpphonetic').style.color="#000";
+	document.getElementById('ed_wpunijoy').style.color='#222EEE';
+	document.getElementById('ed_wpprobhat').style.color='#000';
+	document.getElementById('ed_wpenglish').style.color='#000';
+	document.getElementById('ed_wpphonetic').style.color='#000';
 }
 
 	function enablePhonetic() {
 	makePhoneticEditor('content');
 	makePhoneticEditor('title');
-	document.getElementById('ed_wpunijoy').style.color="#000";
-	document.getElementById('ed_wpenglish').style.color="#000";
-	document.getElementById('ed_wpprobhat').style.color="#000";
-	document.getElementById('ed_wpphonetic').style.color="#222EEE";
+	document.getElementById('ed_wpunijoy').style.color='#000';
+	document.getElementById('ed_wpenglish').style.color='#000';
+	document.getElementById('ed_wpprobhat').style.color='#000';
+	document.getElementById('ed_wpphonetic').style.color='#222EEE';
 }
 
 	function enableProbhat() {
 	makeProbhatEditor('content');
 	makeProbhatEditor('title');
-	document.getElementById('ed_wpprobhat').style.color="#222EEE";
-	document.getElementById('ed_wpunijoy').style.color="#000";
-	document.getElementById('ed_wpenglish').style.color="#000";
-	document.getElementById('ed_wpphonetic').style.color="#000";
+	document.getElementById('ed_wpprobhat').style.color='#222EEE';
+	document.getElementById('ed_wpunijoy').style.color='#000';
+	document.getElementById('ed_wpenglish').style.color='#000';
+	document.getElementById('ed_wpphonetic').style.color='#000';
 }
 
 	function enableEnglish() {
 	switched=!switched;
 	if (switched)
-	document.getElementById('ed_wpenglish').value="Bangla";
+	document.getElementById('ed_wpenglish').value='Bangla';
 	else
-	document.getElementById('ed_wpenglish').value="English";
-	document.getElementById('ed_wpprobhat').style.color="#000";
-	document.getElementById('ed_wpunijoy').style.color="#000";
-	document.getElementById('ed_wpenglish').style.color="#222EEE";
-	document.getElementById('ed_wpphonetic').style.color="#000";
+	document.getElementById('ed_wpenglish').value='English';
+	document.getElementById('ed_wpprobhat').style.color='#000';
+	document.getElementById('ed_wpunijoy').style.color='#000';
+	document.getElementById('ed_wpenglish').style.color='#222EEE';
+	document.getElementById('ed_wpphonetic').style.color='#000';
 }
 				</script>
-EOT;
+";
 }
 
 add_action('bangla_kb', 'wp_banglakb_comments');
@@ -174,8 +174,6 @@ function wp_banglakb_comments(){
 <input type='button' value='phonetic' id='phonetic' onclick='enablePhonetic();'></input>
 <input type='button' value='probhat' id='probhat' onclick='enableProbhat();'></input>
 <input type='button' value='english' id='english' onclick='enableEnglish();'></input>
-
 <?php
-				
 }
 ?>
