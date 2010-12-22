@@ -1,10 +1,10 @@
 === Plugin Name ===
-Contributors: lavluda
+Contributors: lavluda, rajuru
 Donate link: http://www.ekushey.org/
 Tags: keyboard, bangla, comment
-Requires at least: 1.5
+Requires at least: 2.5
 Tested up to: 2.9.2
-Stable tag: 2.1.5
+Stable tag: 3.0
 
 Bangla Typing Scripts for wordpress. This Java Script based add-ons will let your visitors type in Bangla without using any 3rd party tool or keyboard manager along with in your "new post page" you will get option to write post in bangla.
 
@@ -14,7 +14,7 @@ Bangla Typing Scripts for wordpress. This Java Script based add-ons will let you
 
 for live example: visit http://www.lavluda.com
 
-Currently 3 layouts have been developed for WordPress and they are in mature status.
+Supported Layout: Phonetic, Probhat
 
 == Installation ==
 1. download the zip file
@@ -27,22 +27,30 @@ Currently 3 layouts have been developed for WordPress and they are in mature sta
 
 5. Now go to Users link from options column. Under Users option, click on Your Profile and make sure the Use the visual editor when writing option is unchecked.
 
-6. Now go to Write, You can see 4 new buttons in the formatting bar. They are: UniJoy, Phonetic, probhat & English.
+6. Now go to Write, You can see 3 new buttons in the formatting bar. They are: Phonetic, Probhat & Toggle. Same Buttons in comment area will also be shown!
 
 7. Click on any of this button to activate the layout. to back to english click english.
 
-* If you want to let your visitors make Bangla comment on your blog without using any 3rd party software, just add
+If you want to activate bangla input system in any textbox / textarea, you can call this JS method
+banglakb(input_box_id, driver);
 
-<?php wp_banglakb_comments(); ?>
+example:
+banglakb('custom_box',phonetic);
 
-After "comment" textarea.
-
+Note: do not put quotes around driver parameter!
 
 == Frequently Asked Questions ==
 
 == Screenshots ==
 
 == Changelog ==
+
+= 3.0 =
+* Added new jQuery based input parser and driver from Ekushey.org
+* Almost full rewrite of coding
+* Removal of Unijoy layout as it is bullshit!
+* JS methods are simplified so that you can add bangla input support in custom input box / textareas.
+* No template edits are required to show buttons in comment area. 
 
 = 2.1.5 =
 * short tage removed
