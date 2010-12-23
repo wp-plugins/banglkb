@@ -4,7 +4,7 @@
   Plugin URI: http://ekushey.org/?page/web_input_manager
   Description: Adds Bangla typing system in WordPress Post/Page and Comment section. BanglKB is released from ekushey (http://ekushey.org)
   Author: S. M. Ibrahim Lavlu & The HungryCoder (http://hungrycoder.xenexbd.com)
-  Version: 3.2.3
+  Version: 3.2.4
   Author URI: http://www.lavluda.com
  */
 add_action('init', 'wp_banglakb_loadjs');
@@ -28,8 +28,8 @@ function wp_banglakb() {
 add_filter ( 'comment_form_field_comment', 'wp_banglakb_comments' );
 
 
-function wp_banglakb_comments($contents){
-    $contents .="
+function wp_banglakb_comments($contents=''){
+     $contents .="
     <input type='button' value='phonetic' onclick=\"banglakb_public_comment(phonetic);\"></input>
     <input type='button' value='probhat' onclick=\"banglakb_public_comment(probhat);\"></input>
     <input type='button' value='english' onclick='banglakb_toggle();'></input>
