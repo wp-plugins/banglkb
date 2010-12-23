@@ -4,7 +4,7 @@ Donate link: http://www.ekushey.org/
 Tags: keyboard, bangla, comment
 Requires at least: 2.5
 Tested up to: 3.0.3
-Stable tag: 3.2.2
+Stable tag: 3.2.3
 
 Bangla Typing Scripts for wordpress. This Java Script based add-ons will let your visitors type in Bangla without using any 3rd party tool or keyboard manager along with in your "new post page" you will get option to write post in bangla.
 
@@ -44,6 +44,8 @@ Note: do not put quotes around driver parameter!
 == Screenshots ==
 
 == Changelog ==
+= 3.2.3 =
+* Removed redundant JS and hook call
 
 = 3.0 =
 * Added new jQuery based input parser and driver from Ekushey.org
