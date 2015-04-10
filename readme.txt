@@ -1,12 +1,15 @@
 === Plugin Name ===
-Contributors: lavluda, rajuru
+BanglKB
+Contributors: lavluda, rajuru, Md.Sajedul Haque Romi
 Donate link: http://www.ekushey.org/
-Tags: keyboard, bangla, comment
-Requires at least: 2.5
-Tested up to: 3.0.3
-Stable tag: 3.2.5
+Tags: keyboard, bangla, comment, bengali, phonetic, provat
+Requires at least: WordPress 3.3
+Tested up to: WordPress 4.1
+Stable tag: 3.3
+
 
 Bangla Typing Scripts for wordpress. This Java Script based add-ons will let your visitors type in Bangla without using any 3rd party tool or keyboard manager along with in your "new post page" you will get option to write post in bangla.
+You see three buttons called phonetic, provat, english in WordPress post/page writing box in HTML mode & comment section area.
 
 == Description ==
 
@@ -19,36 +22,24 @@ Supported Layout: Phonetic, Probhat
 == Installation ==
 1. download the zip file
 
-2. After extracting the wp-banglakb.zip file you'll find a folder called banglakb. Upload the banglakb folder to your WordPress' /wp-content/plugins/ folder. Again double check that you have bangla.plugin.php, phoneticunicode.js, probhatunicode.js & unijoy.js files inside /wp-content/plugins/banglakb folder. Else this plugin won't work.
+2. After extracting the banglKB.zip file you'll find a folder called banglKB. Upload the banglKB folder to your WordPress' /wp-content/plugins/ folder.
 
 3. Log-in to your WordPress Control Panel.
 
-4. Go to Plugins option, You'll see BanglKB plugin name there (as given on the above image). Click on Activate link under the Action column. When the plugin gets activated the whole row gets Green.
+4. Go to Plugins option, You'll see BanglKB plugin name there. Click on Activate link under the Action column. When the plugin gets activated the whole row gets Green.
 
-5. Now go to Users link from options column. Under Users option, click on Your Profile and make sure the Use the visual editor when writing option is unchecked.
+5. Now go to Write, You can see 3 new buttons in the formatting bar. They are: Phonetic, Probhat & Toggle. Same Buttons in comment area will also be shown!
 
-6. Now go to Write, You can see 3 new buttons in the formatting bar. They are: Phonetic, Probhat & Toggle. Same Buttons in comment area will also be shown!
+6. Click on any of this button to activate the layout. to back to english click english.
 
-7. Click on any of this button to activate the layout. to back to english click english.
-
-If you want to activate bangla input system in any textbox / textarea, you can call this JS method
-banglakb(input_box_id, driver);
-
-example:
-banglakb('custom_box',phonetic);
-
-Note: do not put quotes around driver parameter!
-
-Some theme may not automatically show the buttons in Comment section. In that case, please add the following code in the expected area of your comment file (usually comments.php);
-
-<?php if(function_exists('wp_banglakb_comments')) wp_banglakb_comments(); ?>
-
-== Frequently Asked Questions ==
-
-== Screenshots ==
+Or Simply search for "BanglKB" in plugin install page and install from there.
 
 == Changelog ==
-= 3.2.4 = 
+
+= 3.3 =
+* Fixed Write panel support by Md. Sajedul Haque Romi (http://codebangla.com )
+
+= 3.2.4 =
 * Fixing empty parameter issue in footer hook
 = 3.2.3 =
 * Removed redundant JS and hook call
@@ -58,13 +49,13 @@ Some theme may not automatically show the buttons in Comment section. In that ca
 * Almost full rewrite of coding
 * Removal of Unijoy layout as it is bullshit!
 * JS methods are simplified so that you can add bangla input support in custom input box / textareas.
-* No template edits are required to show buttons in comment area. 
+* No template edits are required to show buttons in comment area.
 
 = 2.1.5 =
 * short tage removed
 
 = 2.1.4 =
-* wordpress 2.9.1 compatible 
+* wordpress 2.9.1 compatible
 * a bug fixed, showing error in xampp (windows)
 
 

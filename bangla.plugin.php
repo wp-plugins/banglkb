@@ -3,8 +3,8 @@
   Plugin Name: BanglKB
   Plugin URI: http://ekushey.org/?page/web_input_manager
   Description: Adds Bangla typing system in WordPress Post/Page and Comment section. BanglKB is released from ekushey (http://ekushey.org)
-  Author: S. M. Ibrahim Lavlu & The HungryCoder (http://hungrycoder.xenexbd.com)
-  Version: 3.2.5
+  Author: S. M. Ibrahim Lavlu, The HungryCoder (http://hungrycoder.xenexbd.com) & Md. Sajedul Haque Romi
+  Version: 3.3
   Author URI: http://www.lavluda.com
  */
 add_action('init', 'wp_banglakb_loadjs');
@@ -16,12 +16,6 @@ function wp_banglakb_loadjs() {
     wp_enqueue_script('banglakb-driver-phonetic', plugin_dir_url(__FILE__) . 'js/driver.phonetic.js', array('jquery', 'banglakb-engine'));
     wp_enqueue_script('banglakb-driver-probhat', plugin_dir_url(__FILE__) . 'js/driver.probhat.js', array('jquery', 'banglakb-engine'));
     wp_enqueue_script('banglakb', plugin_dir_url(__FILE__) . 'js/banglakb.js', array('jquery', 'banglakb-engine'));
-}
-
-add_action('admin_footer', 'wp_banglakb');
-
-function wp_banglakb() {
-    echo '<script>banglakb_addpostbuttons();</script>';
 }
 
 
@@ -37,4 +31,23 @@ function wp_banglakb_comments(){
     echo $content;
 
 }
+
+
+if( !function_exists('add_bangla_buttons') ){
+    function add_bangla_buttons()
+    { ?>
+        <script>
+        QTags.addButton('phonetic', 'phonetic', banglakb_admin_phonetic);
+        QTags.addButton('provat', 'provat', banglakb_admin_phonetic);
+        QTags.addButton('english', 'english', banglakb_toggle);
+        </script>
+    <?php }
+  
+    add_action('admin_print_footer_scripts',  'add_bangla_buttons');
+}
+
+
+
+
+
 
