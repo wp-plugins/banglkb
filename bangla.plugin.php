@@ -3,7 +3,7 @@
   Plugin Name: BanglKB
   Plugin URI: http://ekushey.org/?page/web_input_manager
   Description: Adds Bangla typing system in WordPress Post/Page and Comment section. BanglKB is released from ekushey (http://ekushey.org)
-  Author: S. M. Ibrahim Lavlu, The HungryCoder (http://hungrycoder.xenexbd.com) & Md. Sajedul Haque Romi
+  Author: S. M. Ibrahim Lavlu, The HungryCoder (http://hungrycoder.xenexbd.com) & Md. Sajedul Haque Romi (http://codebangla.com)
   Version: 3.3
   Author URI: http://www.lavluda.com
  */
